@@ -1,0 +1,50 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+// tag::repositories[]
+repositories {
+    mavenCentral()
+}
+// end::repositories[]
+
+compileJava.options.encoding = 'UTF-8'
+
+// tag:: ext[]
+ext {
+    restletVersion = "2.7.3"
+    mongoLinkVersion = "1.2.2"
+    guiceVersion = "4.0"
+}
+// end::ext[]
+
+// tag::jar[]
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+// end::jar[]
+
+// tag::dependencies[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    compile 'com.sparkjava:spark-core:2.3'
+
+    compile 'com.fasterxml.jackson.core:jackson-core:$restletVersion'
+	compile 'com.fasterxml.jackson.core:jackson-annotations:$restletVersion'
+	compile 'com.fasterxml.jackson.core:jackson-databind:$restletVersion'
+
+    compile "org.mongolink:mongolink:$mongoLinkVersion"
+    compile 'org.jongo:jongo:1.1'
+
+    testCompile "junit:junit:4.12"
+}
+// end::dependencies[]
+
+// tag::wrapper[]
+// end::wrapper[]
