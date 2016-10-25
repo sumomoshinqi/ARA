@@ -1,8 +1,8 @@
-# ARA
+# ARA: RESTful APIs
 APP 2 Project
 
 
 
-Build and Run `cradle run`
+Build and Run `gradle run`
 
 Test on localhost:4567/hello
