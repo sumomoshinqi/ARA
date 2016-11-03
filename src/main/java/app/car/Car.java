@@ -15,10 +15,16 @@ public class Car {
 
 	protected Car() {};
 
-	public Car(String make, String email, String ....) { // Do we need a constructor here?
+	public Car(String make, String model, String license, String carType, int maxPassengers, String color, String validRideTypes, Driver driver) {
 		////////////
 		this.id = UUID.randomUUID();
 		this.make = make;
-		
+		this.model = model;
+		this.license = license;
+		this carType = carType;
+		this.maxPassengers = maxPassengers;
+		this.color = color;
+		this.validRideTypes = validRideTypes;
+		this.driver = driver;
 	}
 }

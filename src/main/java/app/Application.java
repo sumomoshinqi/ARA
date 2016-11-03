@@ -33,11 +33,9 @@ public class Application {
 		});
 
 		new CarController(new CarService());
-		car = new ();
-		driver = new Driver();
-		passenger = new Passenger();
-		ride = new Ride();
-
+		new DriverController(new DriverService());
+		new PassengerController(new PassengerService());
+		new RideController(new RideService());
 	}
 
 }
